@@ -22,3 +22,9 @@ Thumbs.db
 
 # Ignore class files
 *.class
+
+# Ignore all .idea folders (IDE settings)
+**/.idea/
+
+# Ignore all .iml files (IDE module files)
+*.iml
