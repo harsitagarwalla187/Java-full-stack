@@ -84,7 +84,7 @@ class Book {
 public class Assgn {
      public static void main(String[] args) {
 
-        System.out.println("---------------------------------------------");
+        System.out.println("1. ---------------------------------------------");
         ArrayList<Employee> e = new ArrayList<>();
         e.add(new Employee(1, "Harsit", "Engineer"));
         e.add(new Employee(2, "Aha", "Dev"));
@@ -92,14 +92,14 @@ public class Assgn {
             .filter(emp -> emp.name.toLowerCase().charAt(0) == emp.name.toLowerCase().charAt(emp.name.length() - 1))
             .forEach(System.out::println);
 
-        System.out.println("---------------------------------------------");
+        System.out.println("2. ---------------------------------------------");
         ArrayList<Users> users = new ArrayList<>();
         users.add(new Users("A", "a@gmail.com", 2021));
         users.add(new Users("B", "b@gmail.com", 2018));
         users.stream().filter(u -> u.regYear > 2020)
             .forEach(u -> System.out.println(u.email));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("3. ---------------------------------------------");
         ArrayList<Student> students1 = new ArrayList<>();
         students1.add(new Student("X", Arrays.asList(36, 50, 45)));
         students1.add(new Student("Y", Arrays.asList(25, 50, 45)));
@@ -107,7 +107,7 @@ public class Assgn {
             .filter(s -> s.marks.stream().allMatch(m -> m >= 35))
             .forEach(s -> System.out.println(s.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("4. ---------------------------------------------");
         ArrayList<Product> products1 = new ArrayList<>();
         products1.add(new Product("P1", 42, "A"));
         products1.add(new Product("P2", 21, "B"));
@@ -115,13 +115,13 @@ public class Assgn {
             .filter(p -> p.price % 2 == 0 && String.valueOf(p.price).contains("2"))
             .forEach(p -> System.out.println(p.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("5. ---------------------------------------------");
         List<String> departments = Arrays.asList("Admin", "Sales", "HR", "Legal");
         departments.stream().filter(d -> d.length() == 5)
             .map(String::toUpperCase)
             .forEach(System.out::println);
 
-        System.out.println("---------------------------------------------");
+        System.out.println("6. ---------------------------------------------");
         ArrayList<Student> students2 = new ArrayList<>();
         students2.add(new Student("Ram", 1));
         students2.add(new Student("Shyam", 2));
@@ -130,7 +130,7 @@ public class Assgn {
             .sorted(Comparator.comparingInt(s -> s.name.length()))
             .forEach(s -> System.out.println(s.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("7. ---------------------------------------------");
         ArrayList<Book> books1 = new ArrayList<>();
         books1.add(new Book("Java Basics", "A"));
         books1.add(new Book("Python Book", "B"));
@@ -138,7 +138,7 @@ public class Assgn {
             .filter(b -> b.title.toLowerCase().contains("java"))
             .forEach(b -> System.out.println(b.title));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("8. ---------------------------------------------");
         ArrayList<Product> products2 = new ArrayList<>();
         products2.add(new Product("X", 100));
         products2.add(new Product("Y", 200));
@@ -147,13 +147,13 @@ public class Assgn {
         products2.stream().filter(p -> p.price > avg)
             .forEach(p -> System.out.println(p.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("9. ---------------------------------------------");
         String sentence = "Java Stream Practice";
         Arrays.stream(sentence.split(" "))
             .map(String::length)
             .forEach(System.out::println);
 
-        System.out.println("---------------------------------------------");
+        System.out.println("10. ---------------------------------------------");
         ArrayList<Employee> e2 = new ArrayList<>();
         e2.add(new Employee(1, "Aaeio", 25));
         e2.add(new Employee(2, "Rajiv", 30));
@@ -169,19 +169,19 @@ public class Assgn {
             .filter(p -> p.name.toLowerCase().chars().filter(c -> "aeiou".indexOf(c) != -1).count() > 2)
             .forEach(p -> System.out.println(p.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("11. ---------------------------------------------");
         List<Student> trimmed = students2.stream()
             .map(s -> new Student(0, s.name.trim()))
             .collect(Collectors.toList());
 
-        System.out.println("---------------------------------------------");
+        System.out.println("12. ---------------------------------------------");
         ArrayList<Users> users2 = new ArrayList<>();
         users2.add(new Users("A", "a@gmail.com", 21, true));
         users2.add(new Users("B", "b@yahoo.com", 22, true));
         users2.stream().filter(u -> u.email.endsWith("@gmail.com"))
             .forEach(u -> System.out.println(u.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("13. ---------------------------------------------");
         ArrayList<Student> students3 = new ArrayList<>();
         students3.add(new Student("Bnm", "CS"));
         students3.add(new Student("John", "IT"));
@@ -193,7 +193,7 @@ public class Assgn {
             .filter(p -> Character.isUpperCase(p.name.charAt(0)))
             .forEach(p -> System.out.println(p.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("14. ---------------------------------------------");
         ArrayList<Student> students4 = new ArrayList<>();
         students4.add(new Student("Oddy", Arrays.asList(35, 37, 39)));
         students4.add(new Student("Mix", Arrays.asList(35, 36, 37)));
@@ -201,7 +201,7 @@ public class Assgn {
             .filter(s -> s.marks.stream().allMatch(m -> m % 2 == 1))
             .forEach(s -> System.out.println(s.name));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("15. ---------------------------------------------");
         ArrayList<Employee> e3 = new ArrayList<>();
         e3.add(new Employee("John", "IT"));
         e3.add(new Employee("John Smith", "HR"));
@@ -214,13 +214,19 @@ public class Assgn {
             .filter(b -> b.title.chars().noneMatch(Character::isDigit))
             .forEach(b -> System.out.println(b.title));
 
-        System.out.println("---------------------------------------------");
+        System.out.println("16. ---------------------------------------------");
         List<String> courses = Arrays.asList("Java", "CSS", "HTML", "SQL", "Oracle");
         courses.stream()
             .filter(c -> {
                 String s = c.toLowerCase();
                 return !"aeiou".contains("" + s.charAt(0)) && !"aeiou".contains("" + s.charAt(s.length() - 1));
             }).forEach(System.out::println);
-        System.out.println("---------------------------------------------");
+        System.out.println("17. ---------------------------------------------");
+        // List<Student> students5 = new ArrayList<>();
+        // students5.add(new Student("Harsit", "2"));
+        // students5.add(new Student("Harsh", "0"));
+        // students5.add(new Student("Aman", "1"));
+        // students5.add(new Student("Ram", "100"));
+        // students5.stream().filter(student -> student.marks < 30).forEach(System.out::println);
      }
 }
