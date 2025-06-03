@@ -43,3 +43,13 @@ Syntax: File f = new File("D:/Myfolder/fole.txt");
 7. charArrayReader
 8. StringReader
 9. StringWritter
+
+### Serialization
+Serialization in Java is the process of converting an object into a byte stream, so it can be:
+- Saved to a file,
+- Sent over a network,
+- Stored in memory for later reconstruction (deserialization).
+
+#### Classes :
+1. ObjectOutputStream
+2. ObjectInputStream
