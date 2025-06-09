@@ -28,3 +28,6 @@ Thumbs.db
 
 # Ignore all .iml files (IDE module files)
 *.iml
+
+# Ignore all .jar files
+*.jar
