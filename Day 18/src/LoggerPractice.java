@@ -3,7 +3,7 @@
 
 public class LoggerPractice {
 
-//    private static final Logger logger = LogManager.getLogger();
+   private static final Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) {
 
