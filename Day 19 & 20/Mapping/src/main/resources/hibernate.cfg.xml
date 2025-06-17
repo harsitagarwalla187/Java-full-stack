@@ -10,11 +10,12 @@
      <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
     <!--  JPA behaviour  -->
-     <property name="hibernate.hbm2ddl.auto">create</property>
+     <property name="hibernate.hbm2ddl.auto">update</property>
      <property name="hibernate.show_sql">true</property>
 
     <!--  Map Entity Class  -->
-     <mapping class="com.mapping.app.entity.User" />
-     <mapping class="com.mapping.app.entity.Role" />
+<!--     <mapping class="com.mapping.app.entity.User" />-->
+<!--     <mapping class="com.mapping.app.entity.Role" />-->
+     <mapping class="com.mapping.app.entity.Product" />
  </session-factory>
 </hibernate-configuration>

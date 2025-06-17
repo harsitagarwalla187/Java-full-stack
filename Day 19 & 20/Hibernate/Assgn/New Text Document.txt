@@ -1,0 +1,75 @@
+Java Output Prediction Questions 
+1. What is the output of the following code? 
+import java.io.*; 
+public class FileLength { 
+public static void main(String[] args) throws IOException { 
+File file = new File("test.txt"); 
+file.createNewFile(); 
+System.out.println(file.length()); 
+} 
+} 
+
+Output: 0
+
+2. What does the following code print? 
+import java.io.*; 
+public class WriteAppend { 
+public static void main(String[] args) throws IOException { 
+FileWriter fw = new FileWriter("test.txt"); 
+fw.write("Java"); fw.close(); 
+fw = new FileWriter("test.txt", true); 
+fw.write(" Rocks"); fw.close(); 
+BufferedReader br = new BufferedReader(new FileReader("test.txt")); 
+System.out.println(br.readLine()); 
+} 
+} 
+
+Output: Java Rocks
+
+3. What is the output? 
+import java.sql.*; 
+public class DBConnCheck { 
+public static void main(String[] args) throws Exception { 
+try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db", 
+"root", "")) { 
+System.out.println(conn != null); 
+} 
+} 
+} 
+
+Output: true
+
+4. What is printed? 
+ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM users"); 
+rs.next(); 
+System.out.println(rs.getInt(1)); 
+
+Output: no. of users
+
+5. What is the output? 
+logger.info("Application started"); 
+logger.debug("Debug info"); 
+logger.error("Error occurred"); 
+// Root logger level is set to INFO 
+
+INFO  Application started
+ERROR Error occurred
+
+6. What does this Log4j2 pattern print? 
+[%d{HH:mm:ss}] %-5level %logger{36} - %msg%n 
+
+[17:40:20] INFO  MyApp - Application started
+
+7. What happens when you run “mvn clean install'? 
+
+Output: Deletes all previously compiled file and re-compile it again.
+
+8. What does the following dependency block resolve to? 
+<dependency> 
+<groupId>junit</groupId> 
+<artifactId>junit</artifactId> 
+<version>4.13.2</version> 
+<scope>test</scope> 
+</dependency> 
+
+Output: Install JUnit dependency in external libraries and is used for testing purpose.
