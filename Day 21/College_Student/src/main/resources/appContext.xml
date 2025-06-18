@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="college" class="com.myapp.College">-->
+<!--        <constructor-arg index="0" value="Chandigarh University"/>-->
+<!--    </bean>-->
+<!--    <bean id="student1" class="com.myapp.Student">-->
+<!--        <property name="name" value="harsit" />-->
+<!--        <property name="rollNo" value="2121312" />-->
+<!--        <property name="college" ref="college" />-->
+<!--    </bean>-->
+<!--    <bean id="student2" class="com.myapp.Student">-->
+<!--        <property name="name" value="harsh" />-->
+<!--        <property name="rollNo" value="2121309" />-->
+<!--        <property name="college" ref="college" />-->
+<!--    </bean>-->
+<!--    <bean id="student3" class="com.myapp.Student">-->
+<!--        <property name="name" value="Aman" />-->
+<!--        <property name="rollNo" value="2121281" />-->
+<!--        <property name="college" ref="college" />-->
+<!--    </bean>-->
+<!--    <bean id="manyStudents" class="com.myapp.ManyStudents">-->
+<!--        <property name="students">-->
+<!--            <list>-->
+<!--                <ref bean="student1" />-->
+<!--                <ref bean="student2" />-->
+<!--                <ref bean="student3" />-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="teacher" class="com.myapp.Teacher">-->
+<!--        <property name="id" value="1" />-->
+<!--        <property name="name" value="Er. Rahul" />-->
+<!--        <property name="subjects">-->
+<!--            <set>-->
+<!--                <value>Java</value>-->
+<!--                <value>C++</value>-->
+<!--                <value>Python</value>-->
+<!--                <value>Java</value>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <bean id="library" class="com.myapp.Library">
+        <property name="books">
+            <map>
+                <entry key="book4" value="author4" />
+                <entry key="book1" value="author1" />
+                <entry key="book3" value="author3" />
+                <entry key="book2" value="author2" />
+            </map>
+        </property>
+    </bean>
+</beans>
