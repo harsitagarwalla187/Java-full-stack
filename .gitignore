@@ -31,3 +31,6 @@ Thumbs.db
 
 # Ignore all .jar files
 *.jar
+
+# Ignore all folders
+apache-tomcat-10.1.42
