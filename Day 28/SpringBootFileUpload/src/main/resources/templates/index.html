@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http:themeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <h2>File Upload</h2>
+    <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <button type="submit">upload</button>
+    </form>
+
+    <h2>Uploaded files</h2>
+    <table>
+        <tr>
+            <td>File Name</td>
+            <td>View File</td>
+        </tr>
+        <tr th:each="file: ${files}">
+            <td th:text="${file.fileName}"></td>
+            <td><a th:href="@{${file.filePath}}" th:text="${file.fileName}" target="_blank"></a></td>
+        </tr>
+    </table>
+</body>
+</html>
